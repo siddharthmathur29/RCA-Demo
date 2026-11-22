@@ -8,7 +8,7 @@ public final class LoginService {
     }
 
     public boolean authenticate(String username, String password) {
-        if (username == null || username.isBlank() || password.isBlank()) {
+        if (username == null || username.isBlank() || password == null || password.isBlank()) {
             return false;
         }
         return credentials.containsKey(username)
